@@ -1,8 +1,8 @@
-import injectTapEventPlugin from 'react-tap-event-plugin';
+// import injectTapEventPlugin from 'react-tap-event-plugin';
 
 // Needed for onTouchTap
 // http://stackoverflow.com/a/34015469/988941
-injectTapEventPlugin();
+// injectTapEventPlugin();
 
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
@@ -12,18 +12,17 @@ import AppBar from 'material-ui/AppBar';
 
 var React = require('react');
 var DefaultLayout = require('./layouts/default');
+var Main = require('./layouts/material-main');
 
 
 class HelloMessage extends React.Component {
+  // componentDidMount() {
+  //   injectTapEventPlugin();
+  // }
   render() {
     return (
       <DefaultLayout title={this.props.title}>
-          <MuiThemeProvider>
-            <AppBar 
-            title={this.props.title}
-            iconClassNameRight="muidocs-icon-navigation-expand-more"
-            />
-          </MuiThemeProvider>
+          <Main title={this.props.title} iconClassNameRight="muidocs-icon-navigation-expand-more"></Main>
         <div>Hello {this.props.name}</div>
       </DefaultLayout>
     );

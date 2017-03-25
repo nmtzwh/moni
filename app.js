@@ -7,8 +7,8 @@ app.engine('jsx', require('express-react-views').createEngine());
 
 app.get('/', require('./routes').index);
 
-app.listen(3000, function () {
-      console.log('Example app listening on port 3000!');
+app.listen(7777, function () {
+      console.log('Example app listening on port 7777!');
 });
 
 
