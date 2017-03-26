@@ -31,14 +31,9 @@ class DrawerUndocked extends React.Component {
     this.state = {open: false};
   }
 
-  handleToggle(){
-    console.log('toggle');
-    this.setState({open: !this.state.open});
-  }
+  handleToggle = () => this.setState({open: !this.state.open});
 
-  handleClose(){
-    this.setState({open: false});
-  }
+  handleClose = () => this.setState({open: false});
 
   render() {
     return (
@@ -46,14 +41,10 @@ class DrawerUndocked extends React.Component {
         <AppBar
           title={this.props.title}
           iconClassNameRight="muidocs-icon-navigation-expand-more"
-        />
-        <RaisedButton
-          label="Open Drawer"
-          onTouchTap={this.handleToggle}
+          onLeftIconButtonTouchTap={this.handleToggle}
         />
         <Drawer
           docked={false}
-          width={200}
           open={this.state.open}
           onRequestChange={(open) => this.setState({open})}
         >
@@ -67,16 +58,9 @@ class DrawerUndocked extends React.Component {
 
 
 
-class Main extends React.Component {
-  // constructor(props) {
-  //   injectTapEventPlugin();
-  //   super(props);
-  // }
-  // componentDidMount() {
-  //   injectTapEventPlugin();
-  // }
+export class Main extends React.Component {
+  
   render() {
-    
     return (
       <MuiThemeProvider muiTheme={muiTheme}>
         <DrawerUndocked title={this.props.title}/>
@@ -85,4 +69,4 @@ class Main extends React.Component {
   }
 }
 
-module.exports =  Main;
+export default Main;
