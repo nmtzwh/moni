@@ -12,18 +12,25 @@
     "url": "git+https://github.com/nmtzwh/moni.git"
   },
   "author": "tom zeng",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/nmtzwh/moni/issues"
   },
   "homepage": "https://github.com/nmtzwh/moni#readme",
   "dependencies": {
+    "bcrypt": "^1.0.2",
+    "body-parser": "^1.17.1",
     "express": "^4.15.2",
     "http-server": "^0.9.0",
+    "jsonwebtoken": "^7.3.0",
     "material-ui": "^0.17.1",
+    "mongoose": "^4.9.2",
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0",
     "pug": "^2.0.0-beta11",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
+    "react-router": "^4.0.0",
     "react-router-dom": "^4.0.0",
     "react-tap-event-plugin": "^2.0.1"
   },
